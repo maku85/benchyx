@@ -1,0 +1,42 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
+	"vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "space",
+		"indentWidth": 2
+	},
+	"javascript": {
+		"formatter": { "quoteStyle": "double" }
+	},
+	"css": {
+		"parser": { "tailwindDirectives": true },
+		"linter": { "enabled": false }
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedVariables": "error",
+				"noUnusedImports": "error",
+				"useExhaustiveDependencies": "warn",
+				"useHookAtTopLevel": "error",
+				"noNextAsyncClientComponent": "warn"
+			},
+			"suspicious": {
+				"noExplicitAny": "warn",
+				"noUnusedExpressions": "off",
+				"noArrayIndexKey": "off"
+			},
+			"performance": {
+				"noImgElement": "warn"
+			}
+		},
+		"includes": ["**", "!.next/**", "!out/**", "!next-env.d.ts"]
+	},
+	"assist": {
+		"enabled": true,
+		"actions": { "source": { "organizeImports": "on" } }
+	}
+}
