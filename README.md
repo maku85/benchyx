@@ -1,4 +1,11 @@
-# Benchyx
+<p align="center">
+  <img src="./assets/benchyx-banner.png" width="800"/>
+</p>
+
+<h1 align="center">Benchyx</h1>
+<p align="center">
+  Lightweight benchmarking & performance analysis toolkit
+</p>
 
 A minimalist developer tools workspace — a web-based suite of utilities for common developer tasks, with a dark-themed UI and responsive split-panel layout.
 
