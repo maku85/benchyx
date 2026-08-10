@@ -66,6 +66,30 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Benchyx",
+  url: siteUrl,
+  description,
+  image: `${siteUrl}/banner.webp`,
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  featureList: [
+    "JSON formatter and validator",
+    "JWT decoder",
+    "Base64 and URL encoder/decoder",
+    "Regex tester",
+    "Unix timestamp converter",
+    "Text diff",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -85,6 +109,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="h-full overflow-hidden bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD, no user input
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         {children}
       </body>
     </html>
