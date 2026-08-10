@@ -3,10 +3,12 @@
 import {
   ArrowLeftRight,
   Binary,
+  Calculator,
   Clock,
   Fingerprint,
   Hash,
   Key,
+  Palette,
   Regex,
   SquareTerminal,
   Terminal,
@@ -31,6 +33,8 @@ const tools = [
   { id: "diff", name: "Diff", icon: ArrowLeftRight },
   { id: "uuid", name: "UUID", icon: Fingerprint },
   { id: "hash", name: "Hash", icon: Binary },
+  { id: "color", name: "Color", icon: Palette },
+  { id: "numberbase", name: "Base", icon: Calculator },
 ];
 
 export function Sidebar({
