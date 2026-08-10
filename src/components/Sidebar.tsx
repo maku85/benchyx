@@ -2,7 +2,9 @@
 
 import {
   ArrowLeftRight,
+  Binary,
   Clock,
+  Fingerprint,
   Hash,
   Key,
   Regex,
@@ -27,6 +29,8 @@ const tools = [
   { id: "regex", name: "Regex", icon: Regex },
   { id: "time", name: "Time", icon: Clock },
   { id: "diff", name: "Diff", icon: ArrowLeftRight },
+  { id: "uuid", name: "UUID", icon: Fingerprint },
+  { id: "hash", name: "Hash", icon: Binary },
 ];
 
 export function Sidebar({
