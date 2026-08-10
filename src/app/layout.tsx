@@ -15,9 +15,52 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const basePath = process.env.BASE_PATH ?? "";
+const siteUrl = `https://maku85.github.io${basePath}`;
+
+const title =
+  "Benchyx — Free Online Developer Tools (JSON, JWT, Regex, Diff, Base64)";
+const description =
+  "Benchyx is a free, open-source workspace of developer utilities: JSON formatter/validator, JWT decoder, Base64 & URL encoder, regex tester, Unix timestamp converter, and text diff — all in one fast, minimalist tool.";
+
 export const metadata: Metadata = {
-  title: "Benchyx | Developer Utilities",
-  description: "Minimalist developer tool workspace",
+  metadataBase: new URL(`${siteUrl}/`),
+  title: {
+    default: title,
+    template: "%s | Benchyx",
+  },
+  description,
+  keywords: [
+    "json formatter",
+    "json validator",
+    "jwt decoder",
+    "base64 encoder",
+    "url encoder decoder",
+    "regex tester",
+    "unix timestamp converter",
+    "text diff tool",
+    "online developer tools",
+  ],
+  authors: [{ name: "maku85", url: "https://github.com/maku85" }],
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: "Benchyx",
+    images: [{ url: "/banner.webp", width: 1424, height: 752, alt: "Benchyx" }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/banner.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

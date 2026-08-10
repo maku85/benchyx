@@ -1,10 +1,13 @@
 <p align="center">
-  <img src="./assets/benchyx-banner.png" width="800"/>
+  <img src="./public/banner.webp" width="800"/>
 </p>
 
 <h1 align="center">Benchyx</h1>
 <p align="center">
-  Lightweight benchmarking & performance analysis toolkit
+  Free online developer tools — JSON, JWT, Base64, Regex, Timestamps, Diff
+</p>
+<p align="center">
+  <a href="https://maku85.github.io/benchyx/">maku85.github.io/benchyx</a>
 </p>
 
 A minimalist developer tools workspace — a web-based suite of utilities for common developer tasks, with a dark-themed UI and responsive split-panel layout.
